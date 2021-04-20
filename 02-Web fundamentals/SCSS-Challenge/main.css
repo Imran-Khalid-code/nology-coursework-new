@@ -20,3 +20,41 @@ nav {
   background-color: #28527a;
   padding: 0 40px;
 }
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  color: #fafafa;
+}
+
+.button {
+  display: block;
+  width: 100px;
+  background-color: #f0a500;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fafafa;
+}
+
+header {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header div {
+  text-align: center;
+}
+header h1 {
+  color: #28527a;
+  font-size: 50px;
+}
+header h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
+  margin: 20px 0;
+}
+header a {
+  margin: 0 auto;
+}
