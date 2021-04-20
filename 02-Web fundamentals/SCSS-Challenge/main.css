@@ -12,7 +12,7 @@ a:visited {
   text-decoration: none;
 }
 
-nav {
+.navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,24 +37,25 @@ nav {
   color: #fafafa;
 }
 
-header {
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header div {
+.intro {
   text-align: center;
 }
-header h1 {
+.intro__heading {
   color: #28527a;
   font-size: 50px;
 }
-header h2 {
+.intro__sub-heading {
   font-family: "Dancing Script", cursive;
   font-size: 25px;
   margin: 20px 0;
 }
-header a {
+.intro__button {
   margin: 0 auto;
+}
+
+.header {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,0 +1,47 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: $color-primary;
+    padding: 0 40px;
+
+}
+
+.logo {
+    font-family: $font-display;
+    font-size: 20px;
+    color: $color-white;
+}
+
+.button {
+    display: block;
+    width: 100px;
+    background-color: $color-secondary;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: $color-white;
+}
+
+
+
+.intro{
+    text-align: center;
+
+
+ &__heading {
+    color: $color-primary;
+    font-size: 50px;
+ }
+
+ &__sub-heading {
+    font-family: $font-display;
+    font-size: 25px;
+    margin: 20px 0;
+ }
+
+ &__button {
+    margin: 0 auto;
+ }
+}
