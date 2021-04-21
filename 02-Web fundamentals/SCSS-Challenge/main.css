@@ -35,6 +35,11 @@ a:visited {
   padding: 10px 20px;
   border-radius: 10px;
   color: #fafafa;
+  border: none;
+}
+.button--form {
+  width: 100%;
+  background-color: #55a5f0;
 }
 
 .intro {
@@ -53,8 +58,31 @@ a:visited {
   margin: 0 auto;
 }
 
+.wave {
+  vertical-align: top;
+}
+
+.form {
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.form__input {
+  margin-bottom: 20px;
+}
+
 .header {
-  height: 90vh;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  height: 50vh;
+  background-color: #28527a;
   display: flex;
   justify-content: center;
   align-items: center;
