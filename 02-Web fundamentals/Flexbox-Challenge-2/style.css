@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  /* navbar stylings */
+  
+  nav,
+  nav * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  nav {
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    font-size: 1.25em;
+    background-color: black;
+    color: white;
+  }
+  
+  #logo {
+    width: 15%;
+    height: 100%;
+    background-color: green;
+  }
+  
+  #nav-links {
+    width: 50%;
+    height: 100%;
+    justify-content: flex-end;
+  }
+  
+  a {
+    width: 33%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* content stylings */
+  
+  main {
+    width: 95%;
+    height: 500px;
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #left-panel {
+    width: 67.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: row;
+    border: solid black 2px;
+    height: 25%;
+    padding: 15px;
+  }
+  
+  .box {
+    height: 100px;
+    width: 100px;
+    border: solid 1px black;
+    margin: 10px;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+  }
+  
+  #card-1 {
+    justify-content: space-around;
+  }
+  
+  #card-2 {
+    justify-content: flex-end;
+  }
+  
+  #card-3 {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+  
+  #right-panel {
+    width: 27.5%;
+    padding: 15px;
+    border: solid black 2px;
+  }
