@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:"Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+}
+
+
+body {
+    background-color: white;
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+h1 {
+    text-align: center;
+    height: 80px;
+    padding: 30px;
+    color: rgb(94,92,89);
+    font-size: 40px;
+   
+}
+
+
+p {
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+
+}
+
+.german-flag {
+    background-color: white;
+    width: 420px;
+    height: 400px;
+    transform: rotate(90deg);
+    margin: 1px auto;
+    display: block;
+    position: relative;
+    padding: 50px;
+       
+}
+
+.first-ger {
+    background-color: black;
+    width: 140px;
+    height: 100%;
+    float: left;
+}
+
+.second-ger {
+    background-color: rgb(190, 32, 32);
+    width: 140px;
+    height: 100%;
+    float: left;
+}
+
+.third-ger {
+    background-color: yellow;
+    width: 140px;
+    height: 100%;
+    float: left;
+}
+
+
+.german-flag:hover .first-ger {
+    background-color: red;
+}
+
+.german-flag:hover .second-ger{
+    background-color: white;
+}
+
+
+.german-flag:hover .third-ger{
+    background-color: green;
+}
+
+
+.france-flag {
+    background-color: white;
+    width: 420px;
+    height: 400px;
+    display: block;
+    margin: 1px auto;
+    position: relative;
+     
+}
+
+.first {
+    background-color: #002395;
+    width: 140px;
+    height: 100%;
+    float: left;
+  
+}
+
+.second {
+    background-color: #ffffff;
+    width: 140px;
+    height: 100%;
+    float: left;
+}
+
+.third {
+    background-color: #ed2939;
+    width: 140px;
+    height: 100%;
+    float: left;
+}
+
+
+.france-flag:hover .first{
+    background-color: green;
+}
+
+.france-flag:hover .second{
+    background-color: white;
+}
+
+
+
+.france-flag:hover .third{
+    background-color: orange;
+}
