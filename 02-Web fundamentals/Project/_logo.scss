@@ -1,0 +1,14 @@
+.logo {
+    font-family: $font-display;
+    font-size: 20px;
+    color: $color-white;
+    background-color: #565656;
+    width: 29px;
+    height: 25px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.logo:hover {
+    color: $color-secondary;
+}

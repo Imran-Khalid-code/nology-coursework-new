@@ -1,0 +1,78 @@
+.fab {
+    color: $color-white;
+    background-color: $color-primary;
+    font-size: 30px;
+   
+}
+
+.far {
+    color: $color-white;
+    background-color: $color-primary;
+    font-size: 30px;
+}
+
+
+.far:hover {
+    color: $color-secondary;
+}
+
+.fab:hover {
+    color: $color-secondary;
+}
+
+.skills {
+    background-color: $color-secondary;
+    color: $color-white;
+    font-size: 200px;
+    
+
+
+    .fab {
+        color: white;
+        background-color: $color-secondary;
+
+    }
+
+    .fab:hover {
+        color: $color-primary;
+    }
+
+}
+ 
+
+.contact a {
+    text-decoration: none;
+
+    .far {
+        text-decoration: none;
+    }
+
+    .fab {
+        text-decoration: none;
+    }
+
+
+
+
+}
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+ 

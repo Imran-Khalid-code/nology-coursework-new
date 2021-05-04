@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+  background-color: #f0a500;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+div {
+  text-align: center;
+}
+div h1 {
+  color: #333333;
+  font-size: 200px;
+  font-family: "Roboto", sans-serif, sans-serif;
+}
+div h2 {
+  color: cornflowerblue;
+  font-size: 100px;
+  margin: 30px 0;
+}
+div .fas {
+  color: grey;
+  font-size: 50px;
+  margin: 40px 0;
+  padding-top: 70px;
+}
+div .fas:hover {
+  color: #28527a;
+  font-size: 50px;
+}
+
+.wave {
+  vertical-align: top;
+}
+
+.footer {
+  height: 5vh;
+  background-color: #28527a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  position: relative;
+}
+.footer .contact {
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #28527a;
+  font-size: 20px;
+}
+.footer a {
+  text-decoration: none;
+}
+
+h3 {
+  text-align: center;
+  margin: 100px auto;
+  max-width: 550px;
+  position: relative;
+  font-size: 100px;
+}
+
+h3::before {
+  background-color: black;
+  display: inline-block;
+  width: 350px;
+  height: 4px;
+  content: "";
+  position: absolute;
+  left: -60%;
+  top: 50%;
+}
+
+h3::after {
+  background-color: black;
+  display: inline-block;
+  width: 350px;
+  height: 4px;
+  content: "";
+  position: absolute;
+  right: -60%;
+  top: 50%;
+}
+
+h5 {
+  text-align: center;
+  margin: 100px auto;
+  max-width: 550px;
+  position: relative;
+  font-size: 100px;
+}
+
+h5::before {
+  background-color: black;
+  display: inline-block;
+  width: 350px;
+  height: 4px;
+  content: "";
+  position: absolute;
+  left: -60%;
+  top: 50%;
+}
+
+h5::after {
+  background-color: black;
+  display: inline-block;
+  width: 350px;
+  height: 4px;
+  content: "";
+  position: absolute;
+  right: -60%;
+  top: 50%;
+}
+
+.profile-pic {
+  width: 200px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 30px;
+  right: 90px;
+}
+
+@media screen and (max-width: 500px) {
+  .profile-pic {
+    width: 50px;
+  }
+}
+@media screen and (max-width: 550px) {
+  div h1 {
+    font-size: 80px;
+  }
+}
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav {
+  height: 5vh;
+  background-color: #28527a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  margin-top: 100px;
+  transition: all 0.3s ease-out;
+}
+
+.nav-links {
+  color: #fafafa;
+  background-color: #28527a;
+}
+
+.nav-links:hover {
+  color: cornflowerblue;
+  transform: rotate(6deg);
+}
+
+.logo {
+  font-family: "Dancing script", cursive;
+  font-size: 20px;
+  color: #fafafa;
+  background-color: #565656;
+  width: 29px;
+  height: 25px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.logo:hover {
+  color: #f0a500;
+}
+
+.fab {
+  color: #fafafa;
+  background-color: #28527a;
+  font-size: 30px;
+}
+
+.far {
+  color: #fafafa;
+  background-color: #28527a;
+  font-size: 30px;
+}
+
+.far:hover {
+  color: #f0a500;
+}
+
+.fab:hover {
+  color: #f0a500;
+}
+
+.skills {
+  background-color: #f0a500;
+  color: #fafafa;
+  font-size: 200px;
+}
+.skills .fab {
+  color: white;
+  background-color: #f0a500;
+}
+.skills .fab:hover {
+  color: #28527a;
+}
+
+.contact a {
+  text-decoration: none;
+}
+.contact a .far {
+  text-decoration: none;
+}
+.contact a .fab {
+  text-decoration: none;
+}
+
+.line {
+  position: relative;
+  top: 80%;
+  width: 10em;
+  margin: 30px auto;
+  border-right: 4px solid rgba(255, 255, 255, 0.75);
+  font-size: 300%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+.anim-typewriter {
+  animation: typewriter 4s steps(30) 1s 1 normal both, blinkTextCursor 500ms steps(30) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+.projects {
+  padding: 60px 45px;
+}
+
+.projects-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 45px;
+  grid-row-gap: 45px;
+}
+
+.project-item h4 {
+  color: #333333;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.project-item p {
+  color: #333333;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.about {
+  padding: 20px 45px;
+}
+
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(minmax(300px, 1fr));
+  grid-column-gap: 45px;
+  grid-row-gap: 45px;
+}
+
+.about-item h6 {
+  color: #333333;
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin: 0;
+  font-weight: bold;
+}
+
+.about-item p {
+  color: #333333;
+  margin: 0;
+  line-height: 1.6;
+}
