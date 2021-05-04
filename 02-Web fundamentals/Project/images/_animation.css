@@ -1,8 +1,8 @@
 .line {
   position: relative;
-  top: 50%;
+  top: 80%;
   width: 10em;
-  margin: 0 auto;
+  margin: 30px auto;
   border-right: 4px solid rgba(255, 255, 255, 0.75);
   font-size: 300%;
   text-align: center;
