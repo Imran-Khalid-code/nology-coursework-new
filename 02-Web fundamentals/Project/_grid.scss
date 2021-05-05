@@ -1,5 +1,6 @@
 .projects {
     padding: 60px 45px;
+    background-color: $color-secondary;
 }
 
 .projects-inner {
@@ -32,6 +33,7 @@
 
 .about {
     padding: 20px 45px;
+    background-color: $color-secondary;
 }
 
 .about-inner {
@@ -41,6 +43,7 @@
     grid-template-columns: repeat(minmax(300px,1fr));
     grid-column-gap: 45px;
     grid-row-gap: 45px;
+    
     
     
 }
