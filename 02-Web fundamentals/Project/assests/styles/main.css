@@ -69,7 +69,6 @@ h3 {
   position: relative;
   font-size: 100px;
   background-color: #f0a500;
-  font-weight: bold;
 }
 
 h3::before {
