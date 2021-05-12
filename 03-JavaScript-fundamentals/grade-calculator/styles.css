@@ -72,11 +72,12 @@ section {
 }
 
 .is-clear {
-    background: #3fc1c9;
+    background: #33cc33;
+    opacity: 0.5;
 }
 
 .is-equals {
-    background: #3fc1c9;
+    background: #ff3300;
 }
 
 
@@ -84,3 +85,4 @@ section {
 h1 {
     text-align: center;
 }
+
