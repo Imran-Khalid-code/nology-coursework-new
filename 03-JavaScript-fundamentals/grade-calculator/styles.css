@@ -7,10 +7,11 @@
     margin: 0 auto;
     border: 2px solid black;
     border-radius: 5px;
+    background: #364f6b;
 }
 
 section {
-    color: grey;
+    color: white;
     padding: 30px 0px;
 }
 
@@ -30,15 +31,21 @@ section {
 
 
 .calc-button {
-    background: black;
+    background: #3fc1c9;
     opacity: 0.5;
-    border: 1px solid black;
+    border: 2px solid black;
     padding: 20px;
-    color:blue;
+    color: yellow;
     border-radius: 5px;
     font-size: 22px;
     cursor: pointer;
 
+}
+
+
+.calc-button:hover {
+
+    color: #006600;
 }
 
 
@@ -47,8 +54,6 @@ section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px;
-   
-
 }
 
 
@@ -67,10 +72,15 @@ section {
 }
 
 .is-clear {
-    background: green;
+    background: #3fc1c9;
 }
 
 .is-equals {
-    background: lightblue;
+    background: #3fc1c9;
 }
 
+
+
+h1 {
+    text-align: center;
+}
