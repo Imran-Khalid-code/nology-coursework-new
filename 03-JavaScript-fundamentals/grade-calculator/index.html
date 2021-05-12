@@ -11,11 +11,11 @@
 <body>
     <div>
         <h1>Grade Calculator</h1>
-        <input type="text" onblur="handleCalculateGrade(event)"/>
+
     </div>
 <section>
     <div class="calculator">
-        <input type="number" placeholder= 0>
+        <input type="number" onblur="handleCalculateNumber(event)" placeholder="0"/>
     <div class="calculator-buttons">
 
         <button class ="calc-button is-clear">c</button>
@@ -41,7 +41,7 @@
        
         
         <button class ="calc-button is-zero">0</button>
-        <button class ="calc-button is-clear">=</button>
+        <button class ="calc-button is-equals">=</button>
     </div>
     </div>
 </section>

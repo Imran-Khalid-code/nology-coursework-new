@@ -1,40 +1,36 @@
-function handleCalculateGrade(event)  {
+function handleCalculateNumber(event)  {
 
    
 
-    let grade = event.target.value;
+    let number = event.target.value;
 
-   /* if (!grade) {
-        return;
-    };*/
+  
 
 
 
 
-    grade = grade.toUpperCase();
-
-    let percentage;
-    switch (grade) {
-        case "A":
-            percentage = "90-100%";
+    let grade;
+    switch (number) {
+        case "90":
+            grade = "A";
             break;
-        case "B":
-            percentage = "89-70%";
+        case "70":
+            grade = "B";
             break;
-        case "C":
-            percentage = "69-50%";
+        case "50":
+            grade = "C";
             break;
-        case "D":
-            percentage = "49-30%";
+        case "40":
+            grade = "D";
             break;
-        case "E":
-            percentage = "0-29%";
+        case "30":
+            grade = "E";
             break;
         default:
-            percentage = ('see the headmaster');
+            grade = ('see the headmaster');
             break;
     }
 
-    alert("The percentage was " + percentage);
+    alert("The grade was " + grade);
 
 }

@@ -56,3 +56,21 @@ section {
 .is-clear {
     grid-column: span 3;
 }
+
+.is-zero {
+    grid-column: span 3;
+}
+
+
+.is-equals {
+    grid-column: span 1;
+}
+
+.is-clear {
+    background: green;
+}
+
+.is-equals {
+    background: lightblue;
+}
+
