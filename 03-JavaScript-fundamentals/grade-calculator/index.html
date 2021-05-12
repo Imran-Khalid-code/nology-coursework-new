@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div>
+        <h1>Grade Calculator</h1>
+        <input type="text" onblur="handleCalculateGrade(event)"/>
+    </div>
+<section>
+    <div class="calculator">
+        <input type="number" placeholder= 0>
+    <div class="calculator-buttons">
+
+        <button class ="calc-button is-clear">c</button>
+        <button class ="calc-button">÷</button>
+
+        <button class ="calc-button">7</button>
+        <button class ="calc-button">8</button>
+        <button class ="calc-button">9</button>
+        <button class ="calc-button">x</button>
+     
+
+
+        <button class ="calc-button">4</button>
+        <button class ="calc-button">5</button>
+        <button class ="calc-button">6</button>
+        <button class ="calc-button">+</button>
+
+
+        <button class ="calc-button">1</button>
+        <button class ="calc-button">2</button>
+        <button class ="calc-button">3</button>
+        <button class ="calc-button">-</button>
+       
+        
+        <button class ="calc-button is-zero">0</button>
+        <button class ="calc-button is-clear">=</button>
+    </div>
+    </div>
+</section>
 </body>
 </html>
