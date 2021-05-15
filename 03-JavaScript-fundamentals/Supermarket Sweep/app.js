@@ -13,12 +13,9 @@ function handleSupermarketVeg(event) {
 
     switch(veg) {
 
-        case ('potatoes'): 
-            price = ' for potatoes is £1.10 per kg';
-            break;
-
+        case ('potatoes'):      
         case ('carrots'):
-            price = 'for carrots is £1.10 per kg';
+            price = 'for carrots and potatoes is £1.10 per kg each';
             break;
         
 
