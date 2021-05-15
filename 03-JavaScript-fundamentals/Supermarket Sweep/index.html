@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oneStopShop</title>
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/b277887d55.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#" class="basket" >My basket <i class="fas fa-shopping-basket"></i></a>
+        <a href="#" class="button">Log in</a>
+    </nav>
+    <header>
+        <div>
+        <h1>Supermarket Sweep</h1>
+        <h2>Re-energize with some healthy hearty veggies...</h2>
+        <div>
+        <form class="input">
+            <select class="order" onchange="handleSupermarketVeg(event)"> 
+            <option value="cabbage">cabbage</option>
+            <option value="brocolli">brocolli</option>
+            <option value="asparagus">asparagus</option>
+            <option value="carrots">carrots</option>
+            <option value="potatoes">potatoes</option>
+            </select>  
+        </form>
+        </div>
+    </header>
+    <section class="grid">
+       <div class="inner">
+        <div class="image"> <i class="fas fa-leaf"></i></div>
+        <div class="image"> <i class="fas fa-carrot"></i></div>
+        <div class="image"> <i class="fas fa-apple-alt"></i></div>
+       </div>
+    </section>
+    </header>
+    <footer class="footer">
+        <a href="#">Follow us on <i class="fab fa-instagram"></i> </a>
+        <a href="#"> Contact us on <i class="far fa-envelope-open"></i> </a>      
+    </footer>
+</body>
+</html>
