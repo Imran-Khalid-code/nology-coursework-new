@@ -2,7 +2,7 @@
 // need to interact with DOM by using quesry selctors to access the different button on calc - Display:
 const display1 = document.querySelector('.display-1');
 const display2 = document.querySelector('.display-2');
-const tempResult = document.querySelector('temp-result');
+const tempResult = document.querySelector('.temp-result');
 
 // Math operations - reduce code by making one overall function call
 
@@ -14,7 +14,7 @@ const allNumbers = document.querySelectorAll('.calcNumber');
 const allZero = document.querySelector('.zero');
 const allDot= document.querySelector('.dot');
 const allEquals= document.querySelector('.equals');
-const all = document.querySelector('.last-entity-clear');
+const lastClear = document.querySelector('.last-entity-clear');
 const allClear = document.querySelector('.is-clear');
 
 
@@ -45,22 +45,94 @@ allNumbers.forEach((calcNumber)=> {
     });
 });
 
-// 3 step check - 1- Checking to see if num is present in display then. 2- Check each number for dot. 3 - Whether we have all three displays to conduct operation:
+
+// 3 step check - 1- Checking to see if num is present in display then. 2- Check each number for dot. 3 - Whether we have all three displays to conduct operation which we will define later:
 
 operationCalc.forEach((mathCalcs) => {
     mathCalcs.addEventListener("click", (event) => {
       if (!dis2Num) return;
       haveDot = false;
-      const mathCalcName = event.target.innerText;
+      const mathCalcsName = event.target.innerText;
       if (dis1Num && dis2Num && lastOperation) {
         mathOperation();
       } else {
         result = parseFloat(dis2Num);
       }
-      //- clear the result after the last operation and move it into the hx:
-      clearVar(mathCalcName);
-      lastOperation = mathCalcName;
-      console.log(result);
+
+ //- clear the result after the last operation and move it into the hx:
+ clearVar(mathCalcsName);
+ lastOperation = mathCalcsName;
+ console.log(result);
+      
     });
   });
+
+//move display 2 into display 1 (clear display 2) and the math operation used + then store this in temp.result:
+function clearVar(mathCalcsName = ""){
+    dis1Num += dis2Num + " " + mathCalcsName + " ";
+    //update screen:
+    display1.innerText = dis1Num;
+    display2.innerText = "";
+    dis2Num = "";
+    tempResult.innerText = result;
+    
+    }
+  
+
+
+ //Defining the math operation above:
+
+ function mathOperation() {
+    if (lastOperation === "x") {
+      result = parseFloat(result) * parseFloat(dis2Num);
+    } else if (lastOperation === "+") {
+      result = parseFloat(result) + parseFloat(dis2Num);
+    } else if (lastOperation === "-") {
+      result = parseFloat(result) - parseFloat(dis2Num);
+    } else if (lastOperation === "/") {
+      result = parseFloat(result) / parseFloat(dis2Num);
+    } else if (lastOperation === "%") {
+      result = parseFloat(result) % parseFloat(dis2Num);
+    }
+  }
+  
+  //Equal function:
+
+  allEquals.addEventListener("click", () => {
+    if (!dis2Num || !dis1Num) return;
+    haveDot = false;
+    mathOperation();
+    clearVar();
+    display2.innerText = result;
+    tempResult.innerText = "";
+    dis2Num = result;
+    dis1Num = "";
+  });
+
+
+  //Clear All function:
+
+
+  allClear.addEventListener("click", () => {
+    dis1Num = "";
+    dis2Num = "";
+    display1.innerText = "";
+    display2.innerText = "";
+    result = "";
+    tempResult.innerText = "";
+  });
+
+  //clear last function:
+  
+  lastClear.addEventListener("click", () => {
+    display2.innerText = "";
+    dis2Num = "";
+  });
+
+
+
+
+
+ 
+
 
