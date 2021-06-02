@@ -6,7 +6,7 @@ const tempResult = document.querySelector('temp-result');
 
 // Math operations - reduce code by making one overall function call
 
-const mathCalcs = document.querySelector('.math-Calcs');
+const operationCalc = document.querySelectorAll('.mathCalcs');
 
 
 //micellaneous:
@@ -45,5 +45,22 @@ allNumbers.forEach((calcNumber)=> {
     });
 });
 
-// math operation functions checking for dot:
+// 3 step check - 1- Checking to see if num is present in display then. 2- Check each number for dot. 3 - Whether we have all three displays to conduct operation:
+
+operationCalc.forEach((mathCalcs) => {
+    mathCalcs.addEventListener("click", (event) => {
+      if (!dis2Num) return;
+      haveDot = false;
+      const mathCalcName = event.target.innerText;
+      if (dis1Num && dis2Num && lastOperation) {
+        mathOperation();
+      } else {
+        result = parseFloat(dis2Num);
+      }
+      //- clear the result after the last operation and move it into the hx:
+      clearVar(mathCalcName);
+      lastOperation = mathCalcName;
+      console.log(result);
+    });
+  });
 
