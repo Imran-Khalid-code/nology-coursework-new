@@ -1,3 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap");
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.gameBoardReset {
+  margin: 100px auto;
+  width: 800px;
+  height: 800px;
+  background-color: #333333;
+  border: 6px solid rebeccapurple;
+  border-radius: 10px;
+  display: grid;
+  grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+  clear: left;
+}
+
+.gameBoardReset:hover {
   background-color: red;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  font-weight: bold;
+  font-family: sans-serif;
+  border: 6px solid #33cc33;
+  border-radius: 2px;
 }
