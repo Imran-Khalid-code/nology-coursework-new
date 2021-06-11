@@ -8,6 +8,8 @@
 //5- dont allow to put in the same place if there is already an element there
 //6- have a message saying - you won
 //7- no need to refresh when you start a new game
+//Running variables:
+var currentPlayer = 'playerZero';
 var allSquares = document.querySelectorAll('.space');
 allSquares.forEach(function (space) {
   space.addEventListener('click', hitTheButton); // console.log('clicked');
@@ -16,12 +18,16 @@ allSquares.forEach(function (space) {
 
 function hitTheButton(event) {
   var spaceArray = Array.from(allSquares);
-  var findIndex = spaceArray.indexOf(event.target);
-  console.log(findIndex);
-} //need to decide who is going to play first.
+  var findIndex = spaceArray.indexOf(event.target); //now we need to display this player in the console - use innerHTML for this.
 
+  var playerSelection = document.querySelector('#player');
+  playerSelection.innerHTML = currentPlayer; //need an if statment to swap players & and then stop from pressing on the same place twice
 
-var currentPlayer = 'playerZero';
-var playerSelection = document.querySelector('player'); //now we need to display this player in the console - use innerHTML for this.
-
-playerSelection.innerHTML += currentPlayer; //need an if statment to swap players & and then stop from pressing on the same place twice
+  if (currentPlayer === "playerZero") {
+    allSquares[findIndex].classList.add('playerZero');
+    currentPlayer = 'playerX';
+  } else {
+    allSquares[findIndex].classList.add('playerX');
+    currentPlayer = 'playerZero';
+  }
+}

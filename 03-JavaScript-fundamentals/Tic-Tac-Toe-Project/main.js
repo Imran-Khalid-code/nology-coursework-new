@@ -9,6 +9,15 @@
 //7- no need to refresh when you start a new game
 
 
+//Running variables:
+let currentPlayer = 'playerZero';
+
+
+
+
+
+
+
 const allSquares = document.querySelectorAll('.space');
 
 allSquares.forEach((space)=> {
@@ -23,20 +32,24 @@ allSquares.forEach((space)=> {
 function hitTheButton(event) {
     const spaceArray = Array.from(allSquares)
     const findIndex = spaceArray.indexOf(event.target)
-    console.log(findIndex);
+
+//now we need to display this player in the console - use innerHTML for this.
+    const playerSelection = document.querySelector('#player');
+    playerSelection.innerHTML = currentPlayer;
+    
+//need an if statment to swap players & and then stop from pressing on the same place twice
+
+    if(currentPlayer === "playerZero") {
+        allSquares[findIndex].classList.add('playerZero')
+        currentPlayer = 'playerX'
+    }else{
+        allSquares[findIndex].classList.add('playerX')
+        currentPlayer = 'playerZero'
+    }
+
 }
 
 
-//need to decide who is going to play first.
 
-let currentPlayer =  'playerZero'; 
-
-const playerSelection = document.querySelector('player');
-
-//now we need to display this player in the console - use innerHTML for this.
-
-playerSelection.innerHTML += currentPlayer;
-
-//need an if statment to swap players & and then stop from pressing on the same place twice
 
 
