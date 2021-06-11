@@ -7,7 +7,7 @@
 //5- dont allow to put in the same place if there is already an element there
 //6- have a message saying - you won
 //7- no need to refresh when you start a new game
-
+//8- add media queries
 
 //Running variables:
 let currentPlayer = 'playerZero';
@@ -36,8 +36,8 @@ function hitTheButton(event) {
 //now we need to display this player in the console - use innerHTML for this.
     const playerSelection = document.querySelector('#player');
     playerSelection.innerHTML = currentPlayer;
-    
-//need an if statment to swap players & and then stop from pressing on the same place twice
+
+//need an if statement to swap players & and then stop from pressing on the same place twice
 
     if(currentPlayer === "playerZero") {
         allSquares[findIndex].classList.add('playerZero')
@@ -48,6 +48,23 @@ function hitTheButton(event) {
     }
 
 }
+
+//need to add an alert message when someone wins.
+const alertMessage = document.getElementById('.victory-message');
+
+function endResult(result) {
+
+if(currentPlayer === '0'&&'0'&&'0' || 'X'&&'X'&&'X');
+else{
+    currentPlayer = "Draw!"
+}
+alertMessage('victory-message');
+console.log('alertMessage');
+
+
+}
+
+
 
 
 

@@ -18,7 +18,7 @@ $color-secondary: #33cc33;
 }
 
 
-//hoover for the buttons.
+
 
 h1 {
     text-align: center;
@@ -28,16 +28,13 @@ h1 {
     padding: 20px;
 }
 
-.gameBoardReset {
+.gameBoard {
   margin: 100px auto;
   width: 800px;
   height: 800px;
-  /*background-color: $color-primary;*/
-  border: 6px solid rebeccapurple;
+  background-color:$color-primary;
+  border: 9px solid rebeccapurple;
   border-radius: 10px;
-
-  
-
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   clear: left;
@@ -45,14 +42,14 @@ h1 {
 }
 
 
-/*.gameBoardReset:hover {
+.gameBoard:hover {
     background-color: red;
-}*/
+}
 
 
 
 
-.button {
+.space {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,10 +57,19 @@ h1 {
   font-weight: bold;
   font-family: sans-serif;
   border: 6px solid $color-secondary;
-  border-radius: 2px;
+  border-radius: 3px;
   
 }
 
 
 
 
+.playerZero {
+  background-image: url("images/iconfinder_352338_exposure_zero_icon_256px.png");
+  background-color: blueviolet;
+}
+
+.playerX {
+  background-image: url("images/iconfinder_4634454_delete_interface_remove_x_x mark_icon_256px.png");
+  background-color: chartreuse;
+}

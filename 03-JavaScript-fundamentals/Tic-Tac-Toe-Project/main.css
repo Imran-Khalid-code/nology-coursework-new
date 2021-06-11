@@ -18,7 +18,8 @@ h1 {
   margin: 100px auto;
   width: 800px;
   height: 800px;
-  border: 6px solid rebeccapurple;
+  background-color: #333333;
+  border: 9px solid rebeccapurple;
   border-radius: 10px;
   display: grid;
   grid-template: repeat(3, 1fr)/repeat(3, 1fr);
@@ -26,8 +27,9 @@ h1 {
 }
 
 .gameBoard:hover {
-    background-color: red;
+  background-color: red;
 }
+
 .space {
   display: flex;
   justify-content: center;
@@ -36,21 +38,15 @@ h1 {
   font-weight: bold;
   font-family: sans-serif;
   border: 6px solid #33cc33;
-  border-radius: 2px;
+  border-radius: 3px;
 }
-
 
 .playerZero {
-  background-image: url('images/iconfinder_352338_exposure_zero_icon_256px.png');
+  background-image: url("images/iconfinder_352338_exposure_zero_icon_256px.png");
   background-color: blueviolet;
-  
-
 }
 
-
 .playerX {
-  
-background-image: url('images/iconfinder_4634454_delete_interface_remove_x_x\ mark_icon_256px.png');
-background-color: chartreuse;
-
+  background-image: url("images/iconfinder_4634454_delete_interface_remove_x_x mark_icon_256px.png");
+  background-color: chartreuse;
 }
