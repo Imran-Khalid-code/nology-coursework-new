@@ -32,7 +32,7 @@ h1 {
   margin: 100px auto;
   width: 800px;
   height: 800px;
-  background-color: $color-primary;
+  /*background-color: $color-primary;*/
   border: 6px solid rebeccapurple;
   border-radius: 10px;
 
@@ -45,9 +45,9 @@ h1 {
 }
 
 
-.gameBoardReset:hover {
+/*.gameBoardReset:hover {
     background-color: red;
-}
+}*/
 
 
 
@@ -63,4 +63,7 @@ h1 {
   border-radius: 2px;
   
 }
+
+
+
 

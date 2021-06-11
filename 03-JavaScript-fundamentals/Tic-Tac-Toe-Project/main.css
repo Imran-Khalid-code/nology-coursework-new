@@ -14,11 +14,11 @@ h1 {
   padding: 20px;
 }
 
-.gameBoardReset {
+.gameBoard {
   margin: 100px auto;
   width: 800px;
   height: 800px;
-  background-color: #333333;
+  /*background-color: $color-primary;*/
   border: 6px solid rebeccapurple;
   border-radius: 10px;
   display: grid;
@@ -26,11 +26,10 @@ h1 {
   clear: left;
 }
 
-.gameBoardReset:hover {
-  background-color: red;
-}
-
-.button {
+/*.gameBoard:hover {
+    background-color: red;
+}*/
+.space {
   display: flex;
   justify-content: center;
   align-items: center;
