@@ -11,18 +11,19 @@
 //8- add media queries
 //Running variables:
 var currentPlayer = 'playerZero';
+var playerSelection = document.querySelector('#player');
+playerSelection.innerHTML = currentPlayer;
 var allSquares = document.querySelectorAll('.space');
 allSquares.forEach(function (space) {
-  space.addEventListener('click', hitTheButton); // console.log('clicked');
-}); //need to turn our 9 squares into an array - in-built method called array.from can perform this action for us, which we can then index
+  space.addEventListener('click', hitTheButton, {
+    once: true
+  });
+}); //need to turn our 9 squares into an array instead of HTML collection- in-built method called array.from can perform this action for us, which we can then index
 //the index will tell the user which space they are clicking on our grid.
 
 function hitTheButton(event) {
   var spaceArray = Array.from(allSquares);
-  var findIndex = spaceArray.indexOf(event.target); //now we need to display this player in the console - use innerHTML for this.
-
-  var playerSelection = document.querySelector('#player');
-  playerSelection.innerHTML = currentPlayer; //need an if statement to swap players & and then stop from pressing on the same place twice
+  var findIndex = spaceArray.indexOf(event.target);
 
   if (currentPlayer === "playerZero") {
     allSquares[findIndex].classList.add('playerZero');
@@ -31,15 +32,12 @@ function hitTheButton(event) {
     allSquares[findIndex].classList.add('playerX');
     currentPlayer = 'playerZero';
   }
-} //need to add an alert message when someone wins.
 
-
-var alertMessage = document.getElementById('.victory-message');
-
-function endResult(result) {
-  if (currentPlayer === '0' && '0' && '0' || 'X' && 'X' && 'X') ;else {
-    currentPlayer = "Draw!";
+  for (var i = 0; i < 3; i++) {
+    if (allSquares[i][0] === allSquares[i][1] && allSquares[i][1] === allSquares[i][2]) return allSquares[i][0];
+    console.log(allSquares);
   }
-  alertMessage('victory-message');
-  console.log('alertMessage');
-}
+} //now we need to display this player in the console - use innerHTML for this.
+//need an if statement to swap players & and then stop from pressing on the same place twice
+//for loop to say if you get three in a row you will win:
+//A message to say you have won or drawn

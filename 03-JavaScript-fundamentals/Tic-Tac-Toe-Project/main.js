@@ -12,57 +12,70 @@
 //Running variables:
 let currentPlayer = 'playerZero';
 
+const playerSelection = document.querySelector('#player');
+playerSelection.innerHTML = currentPlayer;
 
 
+let allSquares = document.querySelectorAll('.space');
 
-
-
-
-const allSquares = document.querySelectorAll('.space');
 
 allSquares.forEach((space)=> {
 
-    space.addEventListener('click', hitTheButton);
-    // console.log('clicked');
+    space.addEventListener('click', hitTheButton, { once: true});
+    
+     
 })
 
-//need to turn our 9 squares into an array - in-built method called array.from can perform this action for us, which we can then index
+
+
+//need to turn our 9 squares into an array instead of HTML collection- in-built method called array.from can perform this action for us, which we can then index
 //the index will tell the user which space they are clicking on our grid.
 
 function hitTheButton(event) {
+    
     const spaceArray = Array.from(allSquares)
     const findIndex = spaceArray.indexOf(event.target)
+    
+    if(currentPlayer === "playerZero") {
+        allSquares[findIndex].classList.add('playerZero')
+        currentPlayer = 'playerX';
+        
+    }else {
+        allSquares[findIndex].classList.add('playerX')
+        currentPlayer = 'playerZero';
+    }
+
+    
+ for ( let i = 0; i < 3; i++) {
+     if (allSquares[i][0]===allSquares[i][1] && allSquares[i][1]===allSquares[i][2])
+     return allSquares[i][0]
+     console.log(allSquares)
+     
+ 
+ }   
+
+}
+
 
 //now we need to display this player in the console - use innerHTML for this.
-    const playerSelection = document.querySelector('#player');
-    playerSelection.innerHTML = currentPlayer;
+   
 
 //need an if statement to swap players & and then stop from pressing on the same place twice
 
-    if(currentPlayer === "playerZero") {
-        allSquares[findIndex].classList.add('playerZero')
-        currentPlayer = 'playerX'
-    }else{
-        allSquares[findIndex].classList.add('playerX')
-        currentPlayer = 'playerZero'
-    }
-
-}
-
-//need to add an alert message when someone wins.
-const alertMessage = document.getElementById('.victory-message');
-
-function endResult(result) {
-
-if(currentPlayer === '0'&&'0'&&'0' || 'X'&&'X'&&'X');
-else{
-    currentPlayer = "Draw!"
-}
-alertMessage('victory-message');
-console.log('alertMessage');
 
 
-}
+
+    
+
+
+
+//for loop to say if you get three in a row you will win:
+
+
+
+
+   
+      
 
 
 
@@ -70,3 +83,14 @@ console.log('alertMessage');
 
 
 
+
+
+
+
+
+//A message to say you have won or drawn
+
+
+
+
+    
