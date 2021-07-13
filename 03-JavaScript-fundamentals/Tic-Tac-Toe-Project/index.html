@@ -5,29 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title> 
-    <!-- add a favicon onthe tab -->
+
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <h1>Tic Tac Toe</h1>
-    <h3 id="player">playerZero</h3>
+    <h3 id="playerZero"></h3>
+    <h3 id="playerX"></h3>
+    
     <div class="gameBoard">
 
-        <div class="space" id="0"></div>
-        <div class="space" id="1"></div>
-        <div class="space" id="2"></div>
-        <div class="space" id="3"></div>
-        <div class="space" id="4"></div>
-        <div class="space" id="5"></div>
-        <div class="space" id="6"></div>
-        <div class="space" id="7"></div>
-        <div class="space" id="8"></div>
+        <div id="A" class="space"></div>
+        <div id="B" class="space"></div>
+        <div id="C" class="space"></div>
+        
+
+        <div id="D" class="space"></div>
+        <div id="E" class="space"></div>
+        <div id="F" class="space"></div>
+
+        <div id="G" class="space"></div>
+        <div id="H" class="space"></div>
+        <div id="I" class="space"></div>
     </div>
+    <div class="newWinner"></div>
+    <div class="tie"></div>
 
     <div class="endGame">
-        <button id="restart">Restart</div>
+        <button class ="restartbtn">Restart</div>
     </div>
  
-<script src="./main.js"></script>
+<script src="./script.js"></script>
 </body>
 </html>
