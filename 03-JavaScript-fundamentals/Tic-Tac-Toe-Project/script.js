@@ -74,7 +74,6 @@ function firstRow() {
 
 		currentWinner.innerText = `${one} player is the winner!`;
 		// console.log(currentWinner);
-	} else {
 	}
 }
 function secondRow() {

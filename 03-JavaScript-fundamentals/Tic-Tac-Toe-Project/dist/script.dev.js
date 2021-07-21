@@ -58,7 +58,7 @@ function firstRow() {
     winner = true;
     cleanBoard();
     currentWinner.innerText = "".concat(one, " player is the winner!"); // console.log(currentWinner);
-  } else {}
+  }
 }
 
 function secondRow() {
