@@ -5,7 +5,7 @@ const tempResult = document.querySelector(".temp-result");
 
 // Math operations - reduce code by making one overall function call
 
-const operationCalc = document.querySelectorAll(".mathCalcs");
+const operationCalc = document.querySelectorAll(".operation");
 
 //micellaneous:
 const allNumbers = document.querySelectorAll(".calcNumber");
@@ -40,11 +40,11 @@ allNumbers.forEach((calcNumber) => {
 
 // 3 step check - 1- Checking to see if num is present in display then. 2- Check each number for dot. 3 - Whether we have all three displays to conduct operation which we will define later:
 
-operationCalc.forEach((mathCalcs) => {
-	mathCalcs.addEventListener("click", (event) => {
+operationCalc.forEach((operation) => {
+	operation.addEventListener("click", (event) => {
 		if (!dis2Num) result;
 		haveDot = false;
-		const mathCalcsName = event.target.innerText;
+		const operationName = event.target.innerText;
 		if (dis1Num && dis2Num && lastOperation) {
 			mathOperation();
 		} else {
@@ -52,15 +52,15 @@ operationCalc.forEach((mathCalcs) => {
 		}
 
 		//- clear the result after the last operation and move it into the hx:
-		clearVar(mathCalcsName);
-		lastOperation = mathCalcsName;
+		clearVar(operationName);
+		lastOperation = operationName;
 		// console.log(result);
 	});
 });
 
 //move display 2 into display 1 (clear display 2) and the math operation used + then store this in temp.result:
-function clearVar(mathCalcsName = "") {
-	dis1Num += dis2Num + " " + mathCalcsName + " ";
+function clearVar(operationName = "") {
+	dis1Num += dis2Num + " " + operationName + " ";
 	//update screen:
 	display1.innerText = dis1Num;
 	display2.innerText = " ";
