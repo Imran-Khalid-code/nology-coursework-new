@@ -54,21 +54,21 @@ function firstRow() {
   var three = document.getElementById("C").innerText;
   console.log(one, two, three);
 
-  if (one == two && two == three && one == three && one != '') {
+  if (one == two && two == three && one == three && one != "") {
     winner = true;
-    currentWinner.innerText = "".concat(one, " player is the winner!");
-    console.log(currentWinner);
+    cleanBoard();
+    currentWinner.innerText = "".concat(one, " player is the winner!"); // console.log(currentWinner);
   } else {}
 }
 
 function secondRow() {
   var one = document.getElementById("D").innerText;
   var two = document.getElementById("E").innerText;
-  var three = document.getElementById("F").innerText;
-  console.log(one, two, three);
+  var three = document.getElementById("F").innerText; // console.log(one, two, three);
 
-  if (one == two && two == three && one == three && one != '') {
+  if (one == two && two == three && one == three && one != "") {
     winner = true;
+    cleanBoard();
     currentWinner.innerText = "".concat(one, " player is the winner!");
   }
 }
@@ -76,11 +76,11 @@ function secondRow() {
 function thirdRow() {
   var one = document.getElementById("G").innerText;
   var two = document.getElementById("H").innerText;
-  var three = document.getElementById("I").innerText;
-  console.log(one, two, three);
+  var three = document.getElementById("I").innerText; // console.log(one, two, three);
 
-  if (one == two && two == three && one == three && one != '') {
+  if (one == two && two == three && one == three && one != "") {
     winner = true;
+    cleanBoard();
     currentWinner.innerText = "".concat(one, " player is the winner!");
   }
 }
@@ -88,11 +88,11 @@ function thirdRow() {
 function firstColumn() {
   var one = document.getElementById("A").innerText;
   var two = document.getElementById("D").innerText;
-  var three = document.getElementById("G").innerText;
-  console.log(one, two, three);
+  var three = document.getElementById("G").innerText; // console.log(one, two, three);
 
-  if (one == two && two == three && one == three && one != '') {
+  if (one == two && two == three && one == three && one != "") {
     winner = true;
+    cleanBoard();
     currentWinner.innerHTML = "".concat(one, " player is the winner!");
   }
 }
@@ -100,11 +100,11 @@ function firstColumn() {
 function middleColumn() {
   var one = document.getElementById("B").innerText;
   var two = document.getElementById("E").innerText;
-  var three = document.getElementById("H").innerText;
-  console.log(one, two, three);
+  var three = document.getElementById("H").innerText; // console.log(one, two, three);
 
-  if (one == two && two == three && one == three && one != '') {
+  if (one == two && two == three && one == three && one != "") {
     winner = true;
+    cleanBoard();
     currentWinner.innerHTML = "".concat(one, " player is the winner!");
   }
 }
@@ -112,11 +112,11 @@ function middleColumn() {
 function lastColumn() {
   var one = document.getElementById("C").innerText;
   var two = document.getElementById("F").innerText;
-  var three = document.getElementById("I").innerText;
-  console.log(one, two, three);
+  var three = document.getElementById("I").innerText; // console.log(one, two, three);
 
-  if (one == two && two == three && one == three && one != '') {
+  if (one == two && two == three && one == three && one != "") {
     winner = true;
+    cleanBoard();
     currentWinner.innerHTML = "".concat(one, " player is the winner!");
   }
 }
@@ -124,11 +124,11 @@ function lastColumn() {
 function leftDiagonal() {
   var one = document.getElementById("A").innerText;
   var two = document.getElementById("E").innerText;
-  var three = document.getElementById("I").innerText;
-  console.log(one, two, three);
+  var three = document.getElementById("I").innerText; // console.log(one, two, three);
 
-  if (one == two && two == three && one == three && one != '') {
+  if (one == two && two == three && one == three && one != "") {
     winner = true;
+    cleanBoard();
     currentWinner.innerHTML = "".concat(one, " player is the winner!");
   }
 }
@@ -136,11 +136,11 @@ function leftDiagonal() {
 function rightDiagonal() {
   var one = document.getElementById("C").innerText;
   var two = document.getElementById("E").innerText;
-  var three = document.getElementById("G").innerText;
-  console.log(one, two, three);
+  var three = document.getElementById("G").innerText; // console.log(one, two, three);
 
-  if (one == two && two == three && one == three && one != '') {
+  if (one == two && two == three && one == three && one != "") {
     winner = true;
+    cleanBoard();
     currentWinner.innerHTML = "".concat(one, " player is the winner!");
   }
 }
@@ -172,7 +172,7 @@ function cleanBoard() {
   });
 }
 
-newGame.addEventListener('click', cleanBoard); // alternate way to rest game..
+newGame.addEventListener("click", cleanBoard); // alternate way to rest game..
 // newGame.onclick = () =>{
 // 	window.location.reload();
 // }

@@ -23,8 +23,8 @@ h3 {
 
 .gameBoard {
 	margin: 100px auto;
-	width: 800px;
-	height: 800px;
+	width: 450px;
+	height: 550px;
 	background-color: #333333;
 	border: 9px solid rebeccapurple;
 	border-radius: 10px;
@@ -67,14 +67,19 @@ h3 {
 	font-size: 40px;
 }
 
-
-
-
-
 .tie {
 	text-align: center;
 	margin-bottom: 35px;
 	font-weight: bold;
 	font-size: 40px;
+}
 
+@media screen and (max-width: 550px) {
+	h1 {
+		font-size: 50px;
+	}
+
+	.restartbtn {
+		font-size: 50px;
+	}
 }
