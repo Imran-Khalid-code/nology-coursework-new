@@ -1,10 +1,11 @@
-// const translateBtn = document.querySelector(".translate-btn");
+const translateBtn = document.querySelector(".translate-btn");
+const morseTranslate = document.querySelector(".translate-morseCode");
 
-let input = "";
-
-const message = "";
 const alertMessage = "Sorry, please try again!";
+const alertMessage1 = "Secret message unlocked!";
+let input = [];
 
+let isValid = "";
 const alphabet = {
 	".-": "a",
 	"-...": "b",
@@ -43,11 +44,6 @@ const alphabet = {
 	"----.": "9",
 	"-----": "0",
 };
-//testing
-for (let key in alphabet) {
-	//console.log(key);
-	//console.log(alphabet[key]);
-}
 
 // Change into an array using Object.entries() and the iterate over it.
 const validMessageEntries = Object.entries(alphabet);
@@ -61,61 +57,84 @@ function getKeyByValue(value) {
 function englishToMorse(letters) {
 	const messageInMorse = [];
 	letters.split("").forEach((word) => {
-		word.split("").map((value) => {
+		word.split("  ").map((value) => {
 			messageInMorse.push(getKeyByValue(value));
+			input.push(value);
 		});
 	});
-	return messageInMorse.join("").toUpperCase();
+	return messageInMorse.join(" ").toUpperCase();
 }
-console.log(englishToMorse("Imran"));
-//get the keys:
-// const messageTranslated = [];
+//console.log(englishToMorse("imran khalid"));
 
-// message.split(" ").forEach((word) => {
-// 	word.split(" ").map((value) => {
-// 		messageTranslated.push(alphabet[value]);
-// 	});
-// 	messageTranslated.push(" ");
-// });
+translateBtn.addEventListener("click", () => {
+	const englishWord = document.querySelector(".input-box").value;
+	const translateEnglishToMorse = englishToMorse(englishWord);
 
-// console.log(messageTranslated.join("").toUpperCase());
-///////////////////////
-//if else statements to rule out incorrect logs:
+	document.querySelector(".translate-result").innerHTML =
+		translateEnglishToMorse;
+	checkInput1();
+});
 
-// const checkInput = () => {
-// 	if ((input = !alphabet)) {
-// 		return `${alertMessage}.innerHTML`;
-// 	}
-// 	return checkInput;
-// };
+function checkInput1() {
+	input.forEach((value) => {
+		//console.log(alphabet[key]);
 
-//start connecting to the DOM:
-//NEDD TO ADD AN EVENT LISTENER AND THEN  PUT OUR FUNCTION INTO THEM.
+		if (!Object.values(alphabet).includes(value)) {
+			isValid = false;
+		} else if (Object.values(alphabet).includes(value)) {
+			isValid = true;
+		}
+	});
+	//outside foreach
+	if (isValid == true) {
+		alert(alertMessage1);
+	} else if (isValid == false) {
+		alert(alertMessage);
+	}
+}
 
-// translateBtn.addEventListener("click", () => {
-// 	//console.log("works");
-// 	const englishWord = document.querySelector(".input-box").value;
-// 	const translateMorseToEnglish = englishToMorse(englishWord);
-
-// 	document.querySelector(".translate-result").innerHTML =
-// 		translateMorseToEnglish;
-// });
-
-// //-reconfigure this.
+///////////
+function getValueByKey(key) {
+	return alphabet[key];
+}
 
 function morseToEnglish(morse) {
 	const messageTranslated = [];
 
-	morse.split(" / ").forEach((word) => {
+	morse.split("/").forEach((word) => {
 		word.split(" ").map((key) => {
 			messageTranslated.push(getValueByKey(key));
+			input.push(key);
+			console.log(input);
 		});
 	});
-	return messageTranslated.join("").toUpperCase();
+	return messageTranslated.join(" ").toUpperCase();
 }
 
-console.log(morseToEnglish("...-"));
+// console.log(morseToEnglish("..- .--.   -... .-. ---"));
 
-function getValueByKey(key) {
-	return Object.values(alphabet).find((value) => alphabet[value] === key);
+morseTranslate.addEventListener("click", () => {
+	const morseWord = document.querySelector(".input-box2").value;
+	const translateMorseToEnglish = morseToEnglish(morseWord);
+	document.querySelector(".translate-morse").innerHTML =
+		translateMorseToEnglish;
+	checkInput();
+});
+
+function checkInput() {
+	input.forEach((key) => {
+		//console.log(alphabet[key]);
+
+		if (!(key in alphabet)) {
+			isValid = false;
+		} else if (key in alphabet) {
+			isValid = true;
+		}
+	});
+	//outside foreach
+	if (isValid == true) {
+		alert(alertMessage1);
+	} else if (isValid == false) {
+		alert(alertMessage);
+	}
 }
