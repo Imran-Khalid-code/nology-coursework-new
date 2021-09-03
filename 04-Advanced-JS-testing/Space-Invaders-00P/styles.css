@@ -1,0 +1,29 @@
+.MotherShip {
+	max-width: fit-content;
+	text-align: center;
+	border: 5px solid black;
+	margin-bottom: 20px;
+}
+
+.DefenceShip {
+	max-width: fit-content;
+	text-align: center;
+	border: 5px solid black;
+	margin-bottom: 20px;
+}
+
+.AttackShip {
+	max-width: fit-content;
+	text-align: center;
+	border: 5px solid black;
+	margin-bottom: 20px;
+}
+
+.attack {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 50px;
+	margin: 0 auto;
+}

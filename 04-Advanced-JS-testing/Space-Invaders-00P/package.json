@@ -1,0 +1,17 @@
+{
+	"name": "Space-Invaders-00P",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"keywords": [],
+	"author": "Imran khalid",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/plugin-transform-modules-commonjs": "^7.15.0",
+		"jest": "^27.1.0"
+	},
+	"dependencies": {}
+}
