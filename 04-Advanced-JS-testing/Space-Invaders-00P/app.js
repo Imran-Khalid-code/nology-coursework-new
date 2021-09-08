@@ -1,47 +1,49 @@
-class motherShip {
-	constructor(size, name) {
-		this.size = size;
+class Ships {
+	constructor(name, size) {
 		this.name = name;
-		this.points = 100;
-	}
-}
-class defenceShip extends motherShip {
-	constructor(size, name) {
-		super(size, name);
-		this.points = 80;
+		this.size = size;
+		this.score = 100;
+		shipHit === false;
 	}
 }
 
-class attackShip extends motherShip {
-	constructor(size, name) {
-		super(size, name);
-		this.points = 45;
+motherShip1 = new Ships();
+
+class defenceShip extends Ships {
+	constructor(name, size) {
+		super(name, size);
+		this.score = 80;
+		shipHit === false;
 	}
 }
 
-//random function for hit
-// const randomHit = () => {};
+defenceShip1 = new defenceShip();
+defenceShip2 = new defenceShip();
+defenceShip3 = new defenceShip();
+defenceShip4 = new defenceShip();
+defenceShip5 = new defenceShip();
 
-//function to restart game if mothership === 0
-//function if ships hit zero cannot be hit again
+class attackShip extends Ships {
+	constructor(name, size) {
+		super(name, size);
+		this.score = 45;
+		shipHit === false;
+	}
+}
 
-document.querySelector(".attack").addEventListener("click", () => {
-	shipHit();
-});
-//////////////
-function shipHit(motherShip) {
-	input.forEach((hit) => {
-		if (!Object.points(motherShip).includes(hit)) {
-			isValid = false;
-		} else if (Object.points(motherShip).includes(hit)) {
-			isValid = true;
+attackShip1 = new attackShip();
+attackShip2 = new attackShip();
+attackShip3 = new attackShip();
+attackShip4 = new attackShip();
+attackShip5 = new attackShip();
+attackShip6 = new attackShip();
+attackShip7 = new attackShip();
+attackShip8 = new attackShip();
+
+function shipHit() {
+	if (Ships === !hit)
+		for (let Ships = 1; Ships < 10; Ships++) {
+			return Math.random(10);
 		}
-	});
-	if (isValid == true) {
-		reduce(this.points - 9);
-	} else if (isValid == false) {
-		this.point = this.points;
-	}
 }
-let input = [];
-let isValid = "";
+console.log(shipHit);
