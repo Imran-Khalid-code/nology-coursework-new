@@ -67,3 +67,21 @@ function createBoard() {
 	}
 }
 createBoard()
+
+//add pac-man to the board and then make move around
+//where we want him to start
+
+let pacmanCurrentIndex = 490
+
+squares[pacmanCurrentIndex].classList.add('pac-man')
+
+//move pac-man
+
+const movePacman = (e) => {
+	sqaures[pacmanCurrentIndex].classList.remove('pac-man')
+
+	switch (e.keyCode) {
+		case 37:
+			if (pacmanCurrentIndex % width !== 0) pacmanCurrentIndex -= 1
+	}
+}
