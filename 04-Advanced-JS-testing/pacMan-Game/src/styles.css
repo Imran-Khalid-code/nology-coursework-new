@@ -26,7 +26,34 @@
 	border-radius: 10px;
 }
 
+/*Need to set the border to zero to overide the pac dot border*/
+
+.blinky {
+	background-color: red;
+	border: 0px;
+}
+
+.pinky {
+	background-color: pink;
+	border: 0px;
+}
+
+.slinky {
+	background-color: orange;
+	border: 0px;
+}
+
+.dinky {
+	background-color: purple;
+	border: 0px;
+}
+
 .pac-man {
 	background-color: yellow;
 	border-radius: 10px;
+}
+
+.scared-ghost {
+	background-color: aquamarine;
+	border: 0px;
 }

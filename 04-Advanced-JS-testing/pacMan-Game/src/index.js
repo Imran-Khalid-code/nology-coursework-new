@@ -138,10 +138,10 @@ const movePacman = (e) => {
 	squares[pacmanCurrentIndex].classList.add('pac-man')
 
 	//On each game we want to check for :
-	pacDotEaten() // invoked within the movePacman fucntion with eventlistner.
-	//powerPelletEaten()
-	//checkForGameOver()
-	//checkForWin
+	pacDotEaten() // invoked within the movePacman fucntion with eventlistner
+	powerPelletEaten()
+	checkForGameOver()
+	checkForWin()
 }
 document.addEventListener('keyup', movePacman)
 
@@ -158,4 +158,117 @@ const pacDotEaten = () => {
 	}
 }
 
+const powerPelletEaten = () => {
+	if (squares[pacmanCurrentIndex].classList.contains('power-pellet')) {
+		score += 10
+		ghosts.forEach((ghost) => (ghost.isScared = true))
+		setTimeout(unScareGhosts, 10000)
+		squares[pacmanCurrentIndex].classList.remove('power-pellet')
+	}
+}
+
+//make the ghosts stop appearing as aquamarine:
+
+function unScareGhosts() {
+	ghosts.forEach((ghost) => (ghost.isScared = false))
+}
+
 //using constructor method we can create our ghosts forthis section:
+class Ghost {
+	constructor(className, startIndex, speed) {
+		this.className = className
+		this.startIndex = startIndex
+		this.speed = speed
+		this.currentIndex = startIndex
+		this.isScared = false
+		this.timerId = NaN
+	}
+}
+
+ghosts = [
+	new Ghost('blinky', 348, 235),
+	new Ghost('slinky', 376, 330),
+	new Ghost('dinky', 351, 250),
+	new Ghost('pinky', 379, 140),
+]
+
+// draw ghosts on tthe grid:
+
+ghosts.forEach((ghost) => {
+	squares[ghost.currentIndex].classList.add(ghost.className)
+	squares[ghost.currentIndex].classList.add('ghost')
+})
+
+//move each ghost randomly with the moveGhost function below(precussor), we call the fuction moveGhost here:
+
+ghosts.forEach((ghost) => moveGhost(ghost))
+
+//now we need a function for moveGhost randomly
+
+function moveGhost(ghost) {
+	//direction options - {one back, one forward, one down, one up}
+	const directions = [-1, +1, width, -width]
+	let direction = directions[Math.floor(Math.random() * directions.length)]
+
+	ghost.timerId = setInterval(function () {
+		//so if the next square your ghost is going to go does not have a ghost and does not have a wall, else find a next direction and the loops starts over:
+		if (
+			!squares[ghost.currentIndex + direction].classList.contains('ghost') &&
+			!squares[ghost.currentIndex + direction].classList.contains('wall')
+		) {
+			//then the ghost can go here so remove all ghost classes
+			squares[ghost.currentIndex].classList.remove(ghost.className)
+			squares[ghost.currentIndex].classList.remove('ghost', 'scared-ghost')
+			//change ghost index to new index
+			ghost.currentIndex += direction
+			//redraw the ghost in new square using classList
+			squares[ghost.currentIndex].classList.add(ghost.className, 'ghost')
+		} else direction = directions[Math.floor(Math.random() * directions.length)]
+
+		// if the ghost is currently scared:
+		if (ghost.isScared) {
+			squares[ghost.currentIndex].classList.add('scared-ghost')
+		}
+
+		//if the specific ghost is scared and pacman runs into it we want to remove it:
+		if (
+			ghost.isScared &&
+			squares[ghost.currentIndex].classList.contains('pac-man')
+		) {
+			squares[ghost.currentIndex].classList.remove(
+				ghost.className,
+				'ghost',
+				'scared-ghost'
+			)
+			//put ghost back in original position and give pac man another 100 and add the ghost image back.
+			ghost.currentIndex = ghost.startIndex
+			score += 100
+			squares[ghost.currentIndex].classList.add(ghost.className)
+		}
+		checkForGameOver()
+	}, ghost.speed)
+}
+
+//check for a game over
+//if there is a ghost not a scared ghost as it cant kill pacman. in the pacman space then pac man is dead. we then remove eventlistener for moving pacmann and remove the ghost timer Id to stop them moving, and temporarily create an alert.
+
+function checkForGameOver() {
+	if (
+		squares[pacmanCurrentIndex].classList.contains('ghost') &&
+		!squares[pacmanCurrentIndex].classList.contains('scared-ghost')
+	) {
+		ghosts.forEach((ghost) => clearInterval(ghost.timerId))
+		document.removeEventListener('keyup', movePacman)
+		scoreDisplay.innerHTML = 'GAME OVER !'
+	}
+}
+
+//CHECK WIN - MAKE 250 ARE BENCHMARK
+
+const checkForWin = () => {
+	if (score === 150) {
+		ghosts.forEach((ghost) => clearInterval(ghost.timerId))
+		document.removeEventListener('keyup', movePacman)
+		scoreDisplay.innerHTML = 'You Won!'
+	}
+}
