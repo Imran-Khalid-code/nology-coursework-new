@@ -1,8 +1,0 @@
-//this contains some config that allows us to write some tests.
-{
-	"env": {
-		"test": {
-			"plugins": ["@babel/plugin-transform-modules-commonjs"]
-		}
-	}
-}
