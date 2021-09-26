@@ -187,7 +187,7 @@ class Ghost {
 
 ghosts = [
 	new Ghost('blinky', 348, 235),
-	new Ghost('slinky', 376, 330),
+	new Ghost('slinky', 376, 35),
 	new Ghost('dinky', 351, 250),
 	new Ghost('pinky', 379, 140),
 ]
@@ -263,7 +263,7 @@ function checkForGameOver() {
 	}
 }
 
-//CHECK WIN - MAKE 250 ARE BENCHMARK
+//CHECK WIN - MAKE 150 ARE BENCHMARK
 
 const checkForWin = () => {
 	if (score === 150) {
