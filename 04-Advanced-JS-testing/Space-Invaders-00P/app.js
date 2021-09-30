@@ -9,56 +9,42 @@ class Ships {
 		shipArr[0] = this
 	}
 
+	///This ship class is our Mothershiptemplate
+
+	///function for when one of the ships are hit
+	//static - can only be called on the template class main. otherwise it would not work.
 	static hitAShip() {
-		if (shipArr.length > 0 && shipArr[0].name == 'Mother Ship') {
+		if (shipArr.length > 0 && shipArr[0].name === 'Mother Ship') {
 			const randNumber = Math.round(Math.random() * (shipArr.length - 1))
+			//random selection
 			const randShip = shipArr[randNumber]
+			//pass through a random ship to the randNumber Array
+			console.log(randShip)
+			console.log(randNumber)
 			randShip.shipHit()
 
+			//checking if the score is less than 1
 			shipArr.forEach((ship, i) => {
 				if (ship.score < 1) {
 					shipArr.splice(i, 1)
 				}
 			})
 		}
-
+		//consditoin for game over - nothing in array or no ms.
 		if (shipArr.length < 1 || shipArr[0].name != 'Mother Ship') {
 			console.log('game over')
 		}
 		console.log(shipArr)
 	}
 
-	shipHit() {
-		this.score = this.score - 200
-		return this.score
-
-		shipArr[0] = this
-	}
-
-	static hitAShip() {
-		if (shipArr.length > 0 && shipArr[0].name == 'Mother Ship') {
-			const randNumber = Math.round(Math.random() * (shipArr.length - 1))
-			const randShip = shipArr[randNumber]
-			randShip.shipHit()
-
-			shipArr.forEach((ship, i) => {
-				if (ship.score < 1) {
-					shipArr.splice(i, 1)
-				}
-			})
-		}
-
-		if (shipArr.length < 1 || shipArr[0].name != 'Mother Ship') {
-			console.log('game over')
-		}
-		console.log(shipArr)
-	}
-
+	///method is on randship that reduces the score.
 	shipHit() {
 		this.score = this.score - 200
 		return this.score
 	}
 }
+
+//from this template we will inherit its features and make new instances : Mothership,defenceship, attackship.
 
 motherShip1 = new Ships('Mother Ship', 'Large')
 
@@ -71,7 +57,8 @@ class defenceShip extends Ships {
 	}
 }
 
-shipArr.push(this)
+// shipArr.push(this) - global scope - browser so wont work.
+console.log(this)
 
 defenceShip1 = new defenceShip('Defence Ship 1', 'Medium')
 defenceShip2 = new defenceShip('Defence Ship 2', 'Medium')
@@ -96,108 +83,116 @@ attackShip6 = new attackShip('Attack Ship 6', 'Small')
 attackShip7 = new attackShip('Attack Ship 7', 'Small')
 attackShip8 = new attackShip('Attack Ship 8', 'Small')
 
-Ships.hitAShip()
-Ships.hitAShip()
+//now I can put the below in to an event listner:
+//then you can style this puuppy.
 
-Ships.hitAShip()
-Ships.hitAShip()
+shipArr.unshift(motherShip1)
 
-Ships.hitAShip()
-Ships.hitAShip()
+const hitTheBtn = document.querySelector('.attack')
+document.addEventListener('click', Ships.hitAShip)
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
-motherShip2 = new Ships('Mother Ship', 'Large')
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
+// motherShip2 = new Ships('Mother Ship', 'Large')
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
 
-Ships.hitAShip()
-Ships.hitAShip()
-motherShip2 = new Ships('Mother Ship', 'Large')
-Ships.hitAShip()
+// Ships.hitAShip()
+// Ships.hitAShip()
+
+// Ships.hitAShip()
+// Ships.hitAShip()
+
+// Ships.hitAShip()
+// Ships.hitAShip()
+
+// Ships.hitAShip()
+// Ships.hitAShip()
+// motherShip2 = new Ships('Mother Ship', 'Large')
+// Ships.hitAShip()
