@@ -58,7 +58,7 @@ class defenceShip extends Ships {
 }
 
 // shipArr.push(this) - global scope - browser so wont work.
-console.log(this)
+// console.log(this)
 
 defenceShip1 = new defenceShip('Defence Ship 1', 'Medium')
 defenceShip2 = new defenceShip('Defence Ship 2', 'Medium')
@@ -83,116 +83,7 @@ attackShip6 = new attackShip('Attack Ship 6', 'Small')
 attackShip7 = new attackShip('Attack Ship 7', 'Small')
 attackShip8 = new attackShip('Attack Ship 8', 'Small')
 
-//now I can put the below in to an event listner:
-//then you can style this puuppy.
-
 shipArr.unshift(motherShip1)
 
 const hitTheBtn = document.querySelector('.attack')
 document.addEventListener('click', Ships.hitAShip)
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-// motherShip2 = new Ships('Mother Ship', 'Large')
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-
-// Ships.hitAShip()
-// Ships.hitAShip()
-// motherShip2 = new Ships('Mother Ship', 'Large')
-// Ships.hitAShip()
