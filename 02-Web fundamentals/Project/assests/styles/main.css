@@ -1,327 +1,385 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap");
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Roboto', sans-serif;
-	color: #333333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #333333;
 }
 
 a:link,
 a:visited {
-	text-decoration: none;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
 }
 
 div {
-	text-align: center;
+  text-align: center;
 }
 div h1 {
-	color: #333333;
-	font-size: 200px;
-	font-family: 'Roboto', sans-serif, sans-serif;
-	background-color: #f0a500;
+  color: #333333;
+  font-size: 200px;
+  font-family: "Roboto", sans-serif, sans-serif;
+  background-color: #f0a500;
 }
 div h2 {
-	color: cornflowerblue;
-	font-size: 100px;
-	margin: 30px 0;
+  color: red;
+  font-size: 100px;
+  margin: 30px 0;
 }
 div .fas {
-	color: grey;
-	font-size: 50px;
-	margin: 40px 0;
-	padding-top: 70px;
+  color: grey;
+  font-size: 50px;
+  margin: 40px 0;
+  padding-top: 70px;
 }
 div .fas:hover {
-	color: #28527a;
-	font-size: 50px;
+  color: #28527a;
+  font-size: 50px;
 }
 
 .wave {
-	vertical-align: top;
-	position: relative;
+  vertical-align: top;
+  position: relative;
 }
 
 .wave1 {
-	position: absolute;
+  position: absolute;
 }
 
 .footer {
-	height: 5vh;
-	background-color: #28527a;
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	padding: 0px 60px;
-	position: relative;
-	margin-top: auto;
+  height: 5vh;
+  background-color: #28527a;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0px 60px;
+  position: relative;
+  margin-top: auto;
 }
 
 .Portfolio {
-	background-color: #f0a500;
-	padding: 60px;
+  background-color: #f0a500;
+  padding: 60px;
 }
 
 h3 {
-	text-align: center;
-	margin: 100px auto;
-	max-width: 550px;
-	position: relative;
-	font-size: 100px;
-	background-color: #f0a500;
+  text-align: center;
+  margin: 100px auto;
+  max-width: 550px;
+  position: relative;
+  font-size: 100px;
+  background-color: #f0a500;
 }
 
 h3::before {
-	background-color: black;
-	display: inline-block;
-	width: 350px;
-	height: 4px;
-	content: '';
-	position: absolute;
-	left: -60%;
-	top: 50%;
+  background-color: black;
+  display: inline-block;
+  width: 350px;
+  height: 4px;
+  content: "";
+  position: absolute;
+  left: -60%;
+  top: 50%;
 }
 
 h3::after {
-	background-color: black;
-	display: inline-block;
-	width: 350px;
-	height: 4px;
-	content: '';
-	position: absolute;
-	right: -60%;
-	top: 50%;
+  background-color: black;
+  display: inline-block;
+  width: 350px;
+  height: 4px;
+  content: "";
+  position: absolute;
+  right: -60%;
+  top: 50%;
 }
 
 .About {
-	background-color: #f0a500;
-	padding: 60px;
+  background-color: #f0a500;
+  padding: 60px;
 }
 
 h5 {
-	text-align: center;
-	margin: 100px auto;
-	max-width: 550px;
-	position: relative;
-	font-size: 100px;
-	background-color: #f0a500;
+  text-align: center;
+  margin: 100px auto;
+  max-width: 550px;
+  position: relative;
+  font-size: 100px;
+  background-color: #f0a500;
 }
 
 h5::before {
-	background-color: black;
-	display: inline-block;
-	width: 350px;
-	height: 4px;
-	content: '';
-	position: absolute;
-	left: -60%;
-	top: 50%;
+  background-color: black;
+  display: inline-block;
+  width: 350px;
+  height: 4px;
+  content: "";
+  position: absolute;
+  left: -60%;
+  top: 50%;
 }
 
 h5::after {
-	background-color: black;
-	display: inline-block;
-	width: 350px;
-	height: 4px;
-	content: '';
-	position: absolute;
-	right: -60%;
-	top: 50%;
+  background-color: black;
+  display: inline-block;
+  width: 350px;
+  height: 4px;
+  content: "";
+  position: absolute;
+  right: -60%;
+  top: 50%;
 }
 
 .profile-pic {
-	width: 100px;
-	border-radius: 50%;
-	position: absolute;
-	bottom: 50px;
-	right: 90px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50px;
+  right: 90px;
 }
 
-@media screen and (max-width: 500px) {
-	.profile-pic {
-		width: 50px;
-	}
-}
 @media screen and (max-width: 550px) {
-	div h1 {
-		font-size: 80px;
-	}
-}
-@media screen and (max-width: 550px) {
-	div h3 {
-		font-size: 35px;
-	}
-}
-@media screen and (max-width: 550px) {
-	div h5 {
-		font-size: 50px;
-	}
+  .profile-pic {
+    width: 50px;
+  }
+
+  div h1 {
+    font-size: 80px;
+  }
+
+  div h3 {
+    font-size: 35px;
+  }
+
+  div h5 {
+    font-size: 50px;
+  }
 }
 header {
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	background-color: #f0a500;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #f0a500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
 }
 
 nav {
-	height: 5vh;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 40px;
-	margin-top: 0px;
-	background-color: #28527a;
-	transition: all 0.3s ease-out;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  margin-top: 0px;
+  background-color: #28527a;
+  transition: all 0.3s ease-out;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .nav-links {
-	color: #fafafa;
-	background-color: #28527a;
-	padding: 0 80px;
+  color: #fafafa;
+  background-color: #28527a;
+  padding: 0 80px;
 }
 
 .nav-links:hover {
-	color: cornflowerblue;
-	transform: rotate(6deg);
+  color: cornflowerblue;
+  transform: rotate(6deg);
 }
 
 .logo {
-	font-family: 'Dancing script', cursive;
-	font-size: 20px;
-	color: #fafafa;
-	background-color: #565656;
-	width: 29px;
-	height: 25px;
-	border-radius: 25px;
-	text-align: center;
+  font-family: "Dancing script", cursive;
+  font-size: 20px;
+  color: #fafafa;
+  background-color: #565656;
+  width: 29px;
+  height: 25px;
+  border-radius: 25px;
+  text-align: center;
 }
 
 .logo:hover {
-	color: #f0a500;
+  color: #f0a500;
 }
 
 .fab {
-	color: #fafafa;
-	background-color: #28527a;
-	font-size: 30px;
+  color: #fafafa;
+  background-color: #28527a;
+  font-size: 30px;
 }
 
 .far {
-	color: #fafafa;
-	background-color: #28527a;
-	font-size: 30px;
+  color: #fafafa;
+  background-color: #28527a;
+  font-size: 30px;
 }
 
 .far:hover {
-	color: #f0a500;
+  color: #f0a500;
 }
 
 .fab:hover {
-	color: #f0a500;
+  color: #f0a500;
 }
 
 .skills {
-	background-color: #f0a500;
-	color: #fafafa;
-	font-size: 200px;
-	margin: auto;
+  background-color: #f0a500;
+  color: #fafafa;
+  font-size: 200px;
+  margin: auto;
 }
 .skills .fab {
-	color: white;
-	background-color: #f0a500;
+  color: white;
+  background-color: #f0a500;
 }
 .skills .fab:hover {
-	color: #28527a;
+  color: #28527a;
 }
 
 .line {
-	position: relative;
-	top: 80%;
-	width: 10em;
-	margin: 30px auto;
-	border-right: 4px solid rgba(255, 255, 255, 0.75);
-	font-size: 300%;
-	text-align: center;
-	white-space: nowrap;
-	overflow: hidden;
-	transform: translateY(-50%);
+  position: relative;
+  top: 80%;
+  width: 10em;
+  margin: 30px auto;
+  border-right: 4px solid rgba(255, 255, 255, 0.75);
+  font-size: 300%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
 }
 
 .anim-typewriter {
-	animation: typewriter 4s steps(30) 1s 1 normal both,
-		blinkTextCursor 500ms steps(30) infinite normal;
+  animation: typewriter 4s steps(30) 1s 1 normal both, blinkTextCursor 500ms steps(30) infinite normal;
 }
 
 @keyframes typewriter {
-	from {
-		width: 0;
-	}
-	to {
-		width: 10em;
-	}
+  from {
+    width: 0;
+  }
+  to {
+    width: 10em;
+  }
 }
 @keyframes blinkTextCursor {
-	from {
-		border-right-color: rgba(255, 255, 255, 0.75);
-	}
-	to {
-		border-right-color: transparent;
-	}
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
 .projects {
-	padding: 60px 45px;
-	background-color: #f0a500;
+  padding: 60px 45px;
+  background-color: #f0a500;
 }
 
 .projects-inner {
-	max-width: 1200px;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	grid-column-gap: 45px;
-	grid-row-gap: 45px;
+  max-width: 1200px;
+  width: 70%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 45px;
+  grid-row-gap: 45px;
+}
+@media screen and (max-width: 768px) {
+  .projects-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  .projects-inner {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
+.project-item {
+  width: 300px;
+  border: 3px solid black;
+}
 .project-item h4 {
-	color: #333333;
-	font-size: 1.5rem;
-	font-weight: normal;
-	margin: 0;
+  color: #333333;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0;
 }
-
 .project-item p {
-	color: #333333;
-	margin: 0;
-	line-height: 1.6;
+  color: #333333;
+  margin: 0;
+  line-height: 1.6;
+}
+.project-item img {
+  width: 100%;
 }
 
 .about {
-	padding: 20px 45px;
-	background-color: #f0a500;
+  padding: 20px 45px;
+  background-color: #f0a500;
 }
 
 .about-inner {
-	max-width: 1200px;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: repeat(minmax(300px, 1fr));
-	grid-column-gap: 45px;
-	grid-row-gap: 45px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(minmax(300px, 1fr));
+  grid-column-gap: 45px;
+  grid-row-gap: 45px;
 }
 
 .about-item h6 {
-	color: #333333;
-	font-size: 2.5rem;
-	font-weight: normal;
-	margin: 0;
-	font-weight: bold;
+  color: #333333;
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin: 0;
+  font-weight: bold;
 }
 
 .about-item p {
-	color: #333333;
-	margin: 0;
-	line-height: 1.6;
+  color: #333333;
+  margin: 0;
+  line-height: 1.6;
 }

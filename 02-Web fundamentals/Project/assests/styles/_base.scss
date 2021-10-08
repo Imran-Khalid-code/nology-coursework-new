@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap');
 
-$font-body: "Roboto" , sans-serif;
-$font-display: "Dancing script" , cursive;
-
-
+$font-body: 'Roboto', sans-serif;
+$font-display: 'Dancing script', cursive;
 
 $color-secondary: #f0a500;
 $color-primary: #28527a;
@@ -11,17 +9,14 @@ $color-black: #333333;
 $color-white: #fafafa;
 
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: $font-body;
-   color: $color-black; 
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: $font-body;
+	color: $color-black;
 }
-
 
 a:link,
 a:visited {
-   text-decoration: none;
-} 
-
-
+	text-decoration: none;
+}
