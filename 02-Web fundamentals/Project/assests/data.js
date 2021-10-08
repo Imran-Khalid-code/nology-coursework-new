@@ -9,7 +9,7 @@ export const projects = [
 		skills: ['Vanilla JS', 'SCSS'],
 	},
 	{
-		name: 'Calculator',
+		name: 'JS Game',
 		description: '',
 		link: '',
 		preview: '',
@@ -18,7 +18,7 @@ export const projects = [
 		skills: ['Vanilla JS', 'SCSS'],
 	},
 	{
-		name: 'Calculator',
+		name: 'BrewDog',
 		description: '',
 		link: '',
 		preview: '',

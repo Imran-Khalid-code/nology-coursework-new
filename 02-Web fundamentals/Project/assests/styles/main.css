@@ -5,7 +5,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: #333333;
 }
@@ -18,7 +19,8 @@ a:visited {
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: #333333;
 }
@@ -31,23 +33,27 @@ a:visited {
 div {
   text-align: center;
 }
+
 div h1 {
   color: #333333;
   font-size: 200px;
   font-family: "Roboto", sans-serif, sans-serif;
   background-color: #f0a500;
 }
+
 div h2 {
   color: red;
   font-size: 100px;
   margin: 30px 0;
 }
+
 div .fas {
   color: grey;
   font-size: 50px;
   margin: 40px 0;
   padding-top: 70px;
 }
+
 div .fas:hover {
   color: #28527a;
   font-size: 50px;
@@ -65,9 +71,15 @@ div .fas:hover {
 .footer {
   height: 5vh;
   background-color: #28527a;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0px 60px;
   position: relative;
   margin-top: auto;
@@ -92,7 +104,7 @@ h3::before {
   display: inline-block;
   width: 350px;
   height: 4px;
-  content: "";
+  content: '';
   position: absolute;
   left: -60%;
   top: 50%;
@@ -103,7 +115,7 @@ h3::after {
   display: inline-block;
   width: 350px;
   height: 4px;
-  content: "";
+  content: '';
   position: absolute;
   right: -60%;
   top: 50%;
@@ -128,7 +140,7 @@ h5::before {
   display: inline-block;
   width: 350px;
   height: 4px;
-  content: "";
+  content: '';
   position: absolute;
   left: -60%;
   top: 50%;
@@ -139,7 +151,7 @@ h5::after {
   display: inline-block;
   width: 350px;
   height: 4px;
-  content: "";
+  content: '';
   position: absolute;
   right: -60%;
   top: 50%;
@@ -157,32 +169,38 @@ h5::after {
   .profile-pic {
     width: 50px;
   }
-
   div h1 {
     font-size: 80px;
   }
-
   div h3 {
     font-size: 35px;
   }
-
   div h5 {
     font-size: 50px;
   }
 }
+
 header {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: #f0a500;
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: #333333;
 }
@@ -194,12 +212,19 @@ a:visited {
 
 nav {
   height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 40px;
   margin-top: 0px;
   background-color: #28527a;
+  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   position: fixed;
   top: 0;
@@ -214,7 +239,8 @@ nav {
 
 .nav-links:hover {
   color: cornflowerblue;
-  transform: rotate(6deg);
+  -webkit-transform: rotate(6deg);
+          transform: rotate(6deg);
 }
 
 .logo {
@@ -258,10 +284,12 @@ nav {
   font-size: 200px;
   margin: auto;
 }
+
 .skills .fab {
   color: white;
   background-color: #f0a500;
 }
+
 .skills .fab:hover {
   color: #28527a;
 }
@@ -276,11 +304,22 @@ nav {
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .anim-typewriter {
-  animation: typewriter 4s steps(30) 1s 1 normal both, blinkTextCursor 500ms steps(30) infinite normal;
+  -webkit-animation: typewriter 4s steps(30) 1s 1 normal both, blinkTextCursor 500ms steps(30) infinite normal;
+          animation: typewriter 4s steps(30) 1s 1 normal both, blinkTextCursor 500ms steps(30) infinite normal;
+}
+
+@-webkit-keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10em;
+  }
 }
 
 @keyframes typewriter {
@@ -291,6 +330,16 @@ nav {
     width: 10em;
   }
 }
+
+@-webkit-keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
 @keyframes blinkTextCursor {
   from {
     border-right-color: rgba(255, 255, 255, 0.75);
@@ -299,10 +348,12 @@ nav {
     border-right-color: transparent;
   }
 }
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: #333333;
 }
@@ -317,23 +368,45 @@ a:visited {
   background-color: #f0a500;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50vh;
+  background-color: white;
+}
+
+.modal.active {
+  display: block;
+}
+
 .projects-inner {
   max-width: 1200px;
   width: 70%;
   margin: 0 auto;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 45px;
   grid-row-gap: 45px;
 }
+
 @media screen and (max-width: 768px) {
   .projects-inner {
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media screen and (max-width: 500px) {
   .projects-inner {
-    grid-template-columns: repeat(1, 1fr);
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -341,17 +414,20 @@ a:visited {
   width: 300px;
   border: 3px solid black;
 }
+
 .project-item h4 {
   color: #333333;
   font-size: 1.5rem;
   font-weight: normal;
   margin: 0;
 }
+
 .project-item p {
   color: #333333;
   margin: 0;
   line-height: 1.6;
 }
+
 .project-item img {
   width: 100%;
 }
@@ -364,8 +440,10 @@ a:visited {
 .about-inner {
   max-width: 1200px;
   margin: 0 auto;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(minmax(300px, 1fr));
+  -ms-grid-columns: ()[minmax];
+      grid-template-columns: repeat(minmax(300px, 1fr));
   grid-column-gap: 45px;
   grid-row-gap: 45px;
 }
@@ -383,3 +461,4 @@ a:visited {
   margin: 0;
   line-height: 1.6;
 }
+/*# sourceMappingURL=main.css.map */
