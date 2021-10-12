@@ -1,66 +1,35 @@
 .fab {
-    color: $color-white;
-    background-color: $color-primary;
-    font-size: 30px;
-   
+	color: $color-white;
+	background-color: $color-primary;
+	font-size: 30px;
 }
 
 .far {
-    color: $color-white;
-    background-color: $color-primary;
-    font-size: 30px;
+	color: $color-white;
+	background-color: $color-primary;
+	font-size: 30px;
 }
 
-
 .far:hover {
-    color: $color-secondary;
+	color: $color-secondary;
 }
 
 .fab:hover {
-    color: $color-secondary;
+	color: $color-secondary;
 }
 
 .skills {
-    background-color: $color-secondary;
-    color: $color-white;
-    font-size: 200px;
-    margin: auto;
-    
-    
+	background-color: $color-secondary;
+	color: $color-white;
+	font-size: 200px;
+	margin: auto;
 
+	.fab {
+		color: white;
+		background-color: $color-secondary;
+	}
 
-    .fab {
-        color: white;
-        background-color: $color-secondary;
-
-    }
-
-    .fab:hover {
-        color: $color-primary;
-    }
-
+	.fab:hover {
+		color: $color-primary;
+	}
 }
- 
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
- 

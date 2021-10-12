@@ -1,31 +1,88 @@
 import { projects } from './data.js'
 const projectsContainer = document.querySelector('.projects-inner')
-const projectContainer = document.querySelector('.project-item')
-let modal = document.querySelector('.modal')
-const modalbtn = document.querySelector('.modal-btn')
-// console.log(projectContainer)
+const main = document.querySelector('main')
+const overlay = document.querySelector('.overlay')
 
-projects.forEach((project) => {
+projects.map((project) => {
+	//creating each project HTML to be rendered
+
+	//Project Container
 	const projectNode = document.createElement('div')
 	projectNode.classList.add('project-item')
-	let projectImage = document.createElement('img')
-	projectImage.src = project.imgsrc
-	projectNode.appendChild(projectImage)
+
+	//Project Img
+	const projectImg = document.createElement('img')
+	projectImg.classList.add('project-img')
+	projectImg.src = project.imgsrc
+
+	//Project Header
 	const projectHeader = document.createElement('h4')
-	projectHeader.innerHTML = project.name
+	projectHeader.innerText = project.name
+
+	//Append to Project container
+	projectNode.appendChild(projectImg)
 	projectNode.appendChild(projectHeader)
+	console.log(projectNode)
+
+	//Append each project to projects container
+
 	projectsContainer.appendChild(projectNode)
 
-	let modalHeader = document.createElement('h4')
-	modalHeader.innerText = project.name
-	modal.appendChild(modalHeader)
+	//Creating a Modal for each project
 
-	projectImage.addEventListener('click', () => {
-		modalbtn.addEventListener('click', () => {
-			modal.classList.remove('active')
-		})
+	//Modal Container
+	const modal = document.createElement('div')
+	modal.classList.add('modal')
+
+	//Modal Header
+	const modalHeader = document.createElement('h4')
+	modalHeader.innerText = project.name
+
+	//Modal Img
+	const modalImg = document.createElement('img')
+	modalImg.classList.add('modal-img')
+	//?
+	modalImg.src = project.imgsrc
+
+	//Modal Description
+	const modalDescription = document.createElement('div')
+	modalDescription.classList.add('modal-description')
+	modalDescription.innerText = project.description
+
+	//Modal button
+
+	const modalButton = document.createElement('button')
+	modalButton.classList.add('modal-btn')
+	modalButton.innerHTML = 'Close'
+
+	//Close Modal on click
+
+	modalButton.addEventListener('click', () => {
+		modal.classList.remove('active')
+		overlay.classList.remove('active')
+	})
+
+	//Append all elements to modal container
+
+	modal.appendChild(modalHeader)
+	modal.appendChild(modalImg)
+	modal.appendChild(modalDescription)
+	modal.appendChild(modalButton)
+	// append modal to the main
+	main.appendChild(modal)
+
+	projectImg.addEventListener('click', () => {
 		modal.classList.toggle('active')
+		overlay.classList.toggle('active')
 	})
 })
 
-// createModal()
+/////
+const projectButton = document.querySelectorAll('details')
+// projectButton.classList.add('details')
+// projectButton.innerHTML = 'More'
+
+projectButton.addEventListener('click', () => {
+	// projectButton.classList.remove('active')
+	// overlay.classList.remove('active')
+})
